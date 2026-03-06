@@ -1,0 +1,8 @@
+entity,attribute_name,display_name,key_type,data_type,length,required,default_value,comments
+ServiceSlots,slot_id,Идентификатор слота обслуживания,PK,INTEGER,,yes,,Уникальный идентификатор записи слота
+ServiceSlots,slot_date,Дата слота,,"DATE",,yes,,Дата оказания услуги
+ServiceSlots,slot_start_time,Время начала слота,,"TIME",,yes,,Начало часового интервала (например, 10:00)
+ServiceSlots,employee_id,Мастер (FK к «Сотрудники»),FK,INTEGER,,yes,,Мастер, которому принадлежит слот
+ServiceSlots,client_id,Клиент (FK к «Клиенты»),FK,INTEGER,,no,,Клиент, забронировавший слот; пусто, если слот свободен
+ServiceSlots,service_id,Услуга (FK к «Услуги»),FK,INTEGER,,no,,Конкретная услуга, забронированная в слоте
+ServiceSlots,status,Статус слота,,"VARCHAR",20,yes,free,Например: free, booked, completed, cancelled

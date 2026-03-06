@@ -1,0 +1,9 @@
+entity,attribute_name,display_name,key_type,data_type,length,required,default_value,comments
+Persons,person_id,Идентификатор персоны,PK,INTEGER,,yes,,Уникальный идентификатор записи персоны
+Persons,login,Логин,,VARCHAR,50,yes,,Используется для входа в систему, должен быть уникальным
+Persons,password_hash,Пароль (хэш),,VARCHAR,255,yes,,Хранится в виде хэша, не в открытом виде
+Persons,first_name,Имя,,"VARCHAR",50,yes,,Имя для обращений
+Persons,middle_name,Отчество,,"VARCHAR",50,no,,Указывается при наличии, используется в обращениях
+Persons,phone_number,Номер телефона,,"VARCHAR",20,yes,,Используется для отправки СМС и дозвонов, формат контролируется на уровне приложения
+Persons,registration_date,Дата регистрации,,"DATE",,yes,current_date,Дата первоначальной регистрации персоны в системе
+Persons,status,Статус персоны,,"VARCHAR",20,yes,active,Отражает жизненный цикл персоны (active, blocked, deleted и т.п.)

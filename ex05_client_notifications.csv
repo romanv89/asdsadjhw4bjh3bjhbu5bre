@@ -1,0 +1,9 @@
+entity,attribute_name,display_name,key_type,data_type,length,required,default_value,comments
+ClientNotifications,client_notification_id,Идентификатор извещения клиента,PK,INTEGER,,yes,,Уникальный идентификатор записи извещения
+ClientNotifications,client_id,Клиент (FK к «Клиенты»),FK,INTEGER,,yes,,Клиент, которому отправляется извещение
+ClientNotifications,notification_type,Тип извещения,,"VARCHAR",20,yes,,Например: reminder, change, feedback_request
+ClientNotifications,channel,Канал связи,,"VARCHAR",20,yes,,Например: Telegram, WhatsApp, VK, SMS
+ClientNotifications,scheduled_at,Дата и время планируемой отправки,,"TIMESTAMP",,yes,,Когда система должна отправить извещение
+ClientNotifications,sent_at,Дата и время фактической отправки,,"TIMESTAMP",,no,,Заполняется после успешной отправки
+ClientNotifications,message_text,Текст сообщения,,"VARCHAR",500,yes,,Текст, отправляемый клиенту
+ClientNotifications,status,Статус извещения,,"VARCHAR",20,yes,planned,Например: planned, sent, failed, cancelled

@@ -1,0 +1,8 @@
+entity,attribute_name,display_name,key_type,data_type,length,required,default_value,comments
+ClientDiscounts,client_discount_id,Идентификатор записи скидки клиенту,PK,INTEGER,,yes,,Уникальный идентификатор записи скидки
+ClientDiscounts,client_id,Клиент (FK к «Клиенты»),FK,INTEGER,,yes,,Клиент, которому предоставляется скидка
+ClientDiscounts,discount_type,Тип скидки,,"VARCHAR",30,yes,,Например: percent, fixed_amount, promo_code
+ClientDiscounts,discount_value,Величина скидки,,"DECIMAL(10,2)",,yes,0.00,Для percent хранится как процент, для fixed_amount — сумма
+ClientDiscounts,valid_from,Дата начала действия скидки,,"DATE",,yes,current_date,Дата, с которой скидка начинает действовать
+ClientDiscounts,valid_to,Дата окончания действия скидки,,"DATE",,no,,Пусто, если действует до отмены
+ClientDiscounts,status,Статус скидки,,"VARCHAR",20,yes,active,Например: active, used, cancelled, expired

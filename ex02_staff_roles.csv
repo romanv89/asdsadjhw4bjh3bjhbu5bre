@@ -1,0 +1,6 @@
+entity,attribute_name,display_name,key_type,data_type,length,required,default_value,comments
+StaffRoles,staff_role_id,Идентификатор записи роли сотрудника,PK,INTEGER,,yes,,Уникальный идентификатор записи
+StaffRoles,employee_id,Сотрудник (FK к «Сотрудники»),FK,INTEGER,,yes,,Ссылка на сотрудника
+StaffRoles,role_code,Роль сотрудника,,"VARCHAR",20,yes,,Значения: master, manager (может быть расширено)
+StaffRoles,valid_from,Дата начала действия роли,,"DATE",,yes,current_date,С какого момента роль активна
+StaffRoles,valid_to,Дата окончания действия роли,,"DATE",,no,,Позволяет хранить историю изменения ролей, пусто если действует по настоящее время

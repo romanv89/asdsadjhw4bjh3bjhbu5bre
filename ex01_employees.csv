@@ -1,0 +1,5 @@
+entity,attribute_name,display_name,key_type,data_type,length,required,default_value,comments
+Employees,employee_id,Идентификатор сотрудника,PK,INTEGER,,yes,,Уникальный идентификатор записи сотрудника
+Employees,person_id,Идентификатор персоны,FK,INTEGER,,yes,,Связь с сущностью «Персоны»
+Employees,hire_date,Дата регистрации (принятия на работу),,"DATE",,yes,current_date,Дата начала работы сотрудника в сети барбершопов
+Employees,status,Статус сотрудника,,"VARCHAR",20,yes,active,Например: active, on_leave, dismissed

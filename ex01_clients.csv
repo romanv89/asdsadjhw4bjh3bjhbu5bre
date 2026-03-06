@@ -1,0 +1,5 @@
+entity,attribute_name,display_name,key_type,data_type,length,required,default_value,comments
+Clients,client_id,Идентификатор клиента,PK,INTEGER,,yes,,Уникальный идентификатор записи клиента
+Clients,person_id,Идентификатор персоны,FK,INTEGER,,yes,,Связь с сущностью «Персоны»
+Clients,registration_date,Дата регистрации,,"DATE",,yes,current_date,Дата регистрации клиента как участника программы обслуживания
+Clients,status,Статус клиента,,"VARCHAR",20,yes,active,Например: active, inactive, blacklisted

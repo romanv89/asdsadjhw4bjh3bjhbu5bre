@@ -1,0 +1,5 @@
+entity,attribute_name,display_name,key_type,data_type,length,required,default_value,comments
+MasterServices,master_service_id,Идентификатор записи,PK,INTEGER,,yes,,Уникальный идентификатор записи
+MasterServices,employee_id,Идентификатор сотрудника (мастер),FK,INTEGER,,yes,,Внешний ключ к сущности «Сотрудники»
+MasterServices,service_id,Идентификатор услуги,FK,INTEGER,,yes,,Внешний ключ к сущности «Услуги»
+MasterServices,status,Статус услуги мастера,,"VARCHAR",20,yes,active,Позволяет временно выключать услугу для мастера
